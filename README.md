@@ -1,13 +1,18 @@
 #  Appointment Booking System
 
 
-🗓️ Appointment Booking System
+Appointment Booking System
 This web application allows users to create, view, and manage appointments efficiently. It features a simple three-page interface along with a robust backend API to handle appointment creation, availability lookup, and booking functionality.
+
+## Tech Stack
+1. Frontend: React.js
+2. Backend: FastAPI (Python Framework)
+
 ### 1. Clone the Repository
 
-## 📄 Pages Overview
+## Pages Overview
 
-### 1️⃣ Page 1: Enter Appointment ID
+### Page 1: Enter Appointment ID
 Users can input an existing appointment_id to proceed with booking an appointment. This is the entry point for those who have received a booking link or are trying to manage an existing appointment.
 
 1. Validates the ID.
@@ -16,7 +21,7 @@ Users can input an existing appointment_id to proceed with booking an appointmen
 
 3. Ensures that only valid appointment links are used.
 
-### 2️⃣ Page 2: View Available Slots
+### Page 2: View Available Slots
 Once a valid appointment ID is submitted, users are taken to the Available Slots page. This page retrieves data using the backend APIs to show:
 
 1. Available dates (/api/bookings/available-weekdays)
@@ -25,7 +30,7 @@ Once a valid appointment ID is submitted, users are taken to the Available Slots
 
 3. Real-time updates based on current bookings
 
-### 3️⃣ Page 3: Create Appointment Link
+### Page 3: Create Appointment Link
 This page is primarily for admins or users who want to share an appointment form with others.
 
 1. Users can generate an appointment creation link using /api/bookings/create-appointment.
@@ -34,7 +39,7 @@ This page is primarily for admins or users who want to share an appointment form
 
 3. The ID can be shared with others so they can book appointments using the interface from Page 1.
 
-## 🔧 Project Setup
+##  Project Setup
 ```bash
 git clone <your-repo-url>
 cd <your-project-folder>
@@ -47,25 +52,21 @@ cd api
 ```bash
 python -m venv venv
 ```
-### 2. Create a Virtual Environment
-```bash
-python -m venv venv
-```
 
-### 3. Activate the Virtual Environment
+### 2. Activate the Virtual Environment
 ```bash
 source venv\Scripts\activate
 ```
-### 4. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Setup .env file inside api directory
+### 4. Setup .env file inside api directory
 ```bash
 MONGO_URI = <YOUR_MONGODB_URI>
 ```
-### 6. Run
+### 5. Run
 ```bash
 uvicorn main:app --reload
 ```
